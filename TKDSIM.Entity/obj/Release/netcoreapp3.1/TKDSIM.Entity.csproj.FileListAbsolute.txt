@@ -1,0 +1,36 @@
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.deps.json
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.dll
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.csprojAssemblyReference.cache
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.AssemblyInfoInputs.cache
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.AssemblyInfo.cs
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.csproj.CoreCompileInputs.cache
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.dll
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.deps.json
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.dll
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.csprojAssemblyReference.cache
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.AssemblyInfoInputs.cache
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.AssemblyInfo.cs
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.csproj.CoreCompileInputs.cache
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.dll
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.deps.json
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.dll
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.csprojAssemblyReference.cache
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.AssemblyInfoInputs.cache
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.AssemblyInfo.cs
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.csproj.CoreCompileInputs.cache
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.dll
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.deps.json
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\bin\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.csprojAssemblyReference.cache
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.AssemblyInfoInputs.cache
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.AssemblyInfo.cs
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.csproj.CoreCompileInputs.cache
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.Entity\obj\Release\netcoreapp3.1\TKDSIM.Entity.pdb

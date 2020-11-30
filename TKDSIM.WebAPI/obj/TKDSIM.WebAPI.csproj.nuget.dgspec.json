@@ -1,0 +1,437 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.WebAPI\\TKDSIM.WebAPI.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.BLL\\TKDSIM.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.BLL\\TKDSIM.BLL.csproj",
+        "projectName": "TKDSIM.BLL",
+        "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.BLL\\TKDSIM.BLL.csproj",
+        "packagesPath": "C:\\Users\\GunduzB\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\GunduzB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DAL\\TKDSIM.DAL.csproj": {
+                "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DAL\\TKDSIM.DAL.csproj"
+              },
+              "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DTO\\TKDSIM.DTO.csproj": {
+                "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DTO\\TKDSIM.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Core\\TKDSIM.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Core\\TKDSIM.Core.csproj",
+        "projectName": "TKDSIM.Core",
+        "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Core\\TKDSIM.Core.csproj",
+        "packagesPath": "C:\\Users\\GunduzB\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\GunduzB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DTO\\TKDSIM.DTO.csproj": {
+                "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DTO\\TKDSIM.DTO.csproj"
+              },
+              "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Entity\\TKDSIM.Entity.csproj": {
+                "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Entity\\TKDSIM.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DAL\\TKDSIM.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DAL\\TKDSIM.DAL.csproj",
+        "projectName": "TKDSIM.DAL",
+        "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DAL\\TKDSIM.DAL.csproj",
+        "packagesPath": "C:\\Users\\GunduzB\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\GunduzB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Core\\TKDSIM.Core.csproj": {
+                "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Core\\TKDSIM.Core.csproj"
+              },
+              "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Entity\\TKDSIM.Entity.csproj": {
+                "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Entity\\TKDSIM.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.95.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DTO\\TKDSIM.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DTO\\TKDSIM.DTO.csproj",
+        "projectName": "TKDSIM.DTO",
+        "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DTO\\TKDSIM.DTO.csproj",
+        "packagesPath": "C:\\Users\\GunduzB\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\GunduzB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Entity\\TKDSIM.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Entity\\TKDSIM.Entity.csproj",
+        "projectName": "TKDSIM.Entity",
+        "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Entity\\TKDSIM.Entity.csproj",
+        "packagesPath": "C:\\Users\\GunduzB\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\GunduzB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.WebAPI\\TKDSIM.WebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.WebAPI\\TKDSIM.WebAPI.csproj",
+        "projectName": "TKDSIM.WebAPI",
+        "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.WebAPI\\TKDSIM.WebAPI.csproj",
+        "packagesPath": "C:\\Users\\GunduzB\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.WebAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\GunduzB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.BLL\\TKDSIM.BLL.csproj": {
+                "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.BLL\\TKDSIM.BLL.csproj"
+              },
+              "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DAL\\TKDSIM.DAL.csproj": {
+                "projectPath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DAL\\TKDSIM.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

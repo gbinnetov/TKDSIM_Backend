@@ -1,0 +1,72 @@
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.deps.json
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.dll
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.pdb
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Core.dll
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DAL.dll
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DTO.dll
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Entity.dll
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DAL.pdb
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DTO.pdb
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Core.pdb
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csprojAssemblyReference.cache
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.AssemblyInfoInputs.cache
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.AssemblyInfo.cs
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csproj.CoreCompileInputs.cache
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csproj.CopyComplete
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.dll
+C:\Users\ZahidE\Desktop\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.pdb
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.deps.json
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.dll
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.pdb
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Core.dll
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DAL.dll
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DTO.dll
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Entity.dll
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DAL.pdb
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DTO.pdb
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Core.pdb
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csprojAssemblyReference.cache
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.AssemblyInfoInputs.cache
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.AssemblyInfo.cs
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csproj.CoreCompileInputs.cache
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csproj.CopyComplete
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.dll
+D:\Projects\TKDSIM\TKDSIM_API\TKDSIM_API\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.pdb
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.deps.json
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.dll
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.pdb
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Core.dll
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DAL.dll
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DTO.dll
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Entity.dll
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DAL.pdb
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DTO.pdb
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Core.pdb
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csprojAssemblyReference.cache
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.AssemblyInfoInputs.cache
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.AssemblyInfo.cs
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csproj.CoreCompileInputs.cache
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csproj.CopyComplete
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.dll
+C:\Users\ElshadK\Desktop\Gunduz\api 2\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.pdb
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.deps.json
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.BLL.pdb
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Core.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DAL.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DTO.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Entity.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DAL.pdb
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.DTO.pdb
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Core.pdb
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\bin\Release\netcoreapp3.1\TKDSIM.Entity.pdb
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csprojAssemblyReference.cache
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.AssemblyInfoInputs.cache
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.AssemblyInfo.cs
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csproj.CoreCompileInputs.cache
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.csproj.CopyComplete
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.BLL\obj\Release\netcoreapp3.1\TKDSIM.BLL.pdb
