@@ -49,7 +49,7 @@ namespace TKDSIM.DTO.DTO
         public int MissingDocName { get; set; }
         public string MissingDocNameName { get; set; }
 
-        public int OrderNo { get; set; }
+        public string OrderNo { get; set; }
         public string OrderNoName { get; set; }
 
         public string LatterNo { get; set; }

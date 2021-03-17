@@ -148,9 +148,7 @@ namespace TKDSIM.BLL.TKDSIMBLL
             {
                 if (orderProjects.Where(x => x.A_ID == item.A_ID).Count() > 0)
                 {
-                    int enumvalid = Convert.ToInt32(orderProjects.Where(x => x.A_ID == item.A_ID).OrderBy(x => x.InsertDate).FirstOrDefault().OrderNo);
-                    item.OrderNo = enumvalid;
-                    item.OrderNoName = _efEnumValueDal.Get(x => x.EV_ID == enumvalid).Result.Value;
+                    item.OrderNo = orderProjects.Where(x => x.A_ID == item.A_ID).OrderBy(x => x.InsertDate).FirstOrDefault().OrderNo;
                 }
                 appealInforetrun.Add(item);
             }
@@ -266,7 +264,7 @@ namespace TKDSIM.BLL.TKDSIMBLL
             }
             appealInfoResult =  WorkDoneFormJoin(appealInfoResult, workDoneForms);
             appealInfoResult =  MissingDocsJoin(appealInfoResult, missingDocs);
-            appealInfoResult = OrderProjectsSearch(appealInfoResult, orderProjectDTO);
+            appealInfoResult = OrderProjectsJoin(appealInfoResult, orderProjectDTO);
             appealInfoResult = WorkDoneTableJoin(appealInfoResult, workDoneTables);
 
             return appealInfoResult;
