@@ -20,12 +20,12 @@ namespace TKDSIM.BLL.TKDSIMBLL
             _efOrderProjectDal = efOrderProjectDal;
             _mapper = mapper;
         }
-        public async Task<OrderProjectDTO> Add(OrderProjectDTO item)
+        public async Task<List<OrderProjectDTO>> Add(OrderProjectDTO item)
         {
             OrderProject OrderProject = _mapper.Map<OrderProject>(item);
             OrderProject.InsertDate = DateTime.Now;
             OrderProject OrderProjectResult = await _efOrderProjectDal.AddAsync(OrderProject);
-            OrderProjectDTO OrderProjectDTO = _mapper.Map<OrderProjectDTO>(OrderProjectResult);
+            List<OrderProjectDTO> OrderProjectDTO = await _efOrderProjectDal.OrderProjectsByAppealID(item.A_ID);
             return OrderProjectDTO;
         }
 
@@ -38,15 +38,13 @@ namespace TKDSIM.BLL.TKDSIMBLL
 
         public async Task<OrderProjectDTO> GetByID(decimal id)
         {
-            OrderProject OrderProject = await _efOrderProjectDal.Get(d => d.O_ID == id && d.DeleteDate == null);
-            OrderProjectDTO OrderProjectDTO = _mapper.Map<OrderProjectDTO>(OrderProject);
+            OrderProjectDTO OrderProjectDTO = await _efOrderProjectDal.OrderProjectsByID((int)id);
             return OrderProjectDTO;
         }
 
         public async Task<List<OrderProjectDTO>> GetByAppealInfoID(decimal id)
         {
-            List<OrderProject> item = await _efOrderProjectDal.GetAll(d => d.A_ID == id && d.DeleteDate == null);
-            List<OrderProjectDTO> itemDto = _mapper.Map<List<OrderProjectDTO>>(item);
+            List<OrderProjectDTO> itemDto = await _efOrderProjectDal.OrderProjectsByAppealID((int)id);
             return itemDto;
         }
 
@@ -57,7 +55,7 @@ namespace TKDSIM.BLL.TKDSIMBLL
             return OrderProjectDTO;
         }
 
-        public async Task<OrderProjectDTO> Update(OrderProjectDTO item)
+        public async Task<List<OrderProjectDTO>> Update(OrderProjectDTO item)
         {
             OrderProject OrderProjectGet = await _efOrderProjectDal.Get(x => x.O_ID == item.O_ID);
             if (OrderProjectGet == null)
@@ -68,7 +66,7 @@ namespace TKDSIM.BLL.TKDSIMBLL
             OrderProject.InsertDate = OrderProjectGet.InsertDate;
             OrderProject.A_ID = OrderProjectGet.A_ID;
             OrderProject OrderProjectResult = await _efOrderProjectDal.UpdateAsync(OrderProject);
-            OrderProjectDTO OrderProjectDTO = _mapper.Map<OrderProjectDTO>(OrderProjectResult);
+            List<OrderProjectDTO> OrderProjectDTO = await _efOrderProjectDal.OrderProjectsByAppealID(item.A_ID);
             return OrderProjectDTO;
         }
     }

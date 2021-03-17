@@ -118,6 +118,38 @@ namespace TKDSIM.WebAPI.Controllers
             return groupByAppealID;
         }
 
+
+        private List<AppealInfoDetailDto> IncomingAppeal(List<AppealInfoDetailDto> appealInfoDTO, List<AppealInfoDetailDto> appealInfoDetailDTO)
+        {
+
+            List<AppealInfoDetailDto> groupByAppealID = new List<AppealInfoDetailDto>();
+
+            for (int i = 0; i < appealInfoDTO.Count; i++)
+            {
+                AppealInfoDetailDto returnDto = new AppealInfoDetailDto();
+                var resultByAppealID = appealInfoDetailDTO.Where(x => x.A_ID == appealInfoDTO[i].A_ID).ToList();
+                if (resultByAppealID.Count > 0)
+                {
+                    returnDto = resultByAppealID[0];
+                    for (int j = 0; j < resultByAppealID.Count; j++)
+                    {
+
+                        if (returnDto.InsertDate < resultByAppealID[j].InsertDate)
+                        {
+                            returnDto = resultByAppealID[j];
+                        }
+                    }
+                    groupByAppealID.Add(returnDto);
+                }
+
+            }
+
+
+            return groupByAppealID;
+        }
+
+
+
         private List<AppealInfoDTO> IncomingAppealSize(List<AppealInfoDTO> appealInfoDTO, List<AppealInfoDetailDto> appealInfoDetailDTO)
         {
 
@@ -135,13 +167,22 @@ namespace TKDSIM.WebAPI.Controllers
                         returnDto = resultByAppealID[0];
                         for (int j = 0; j < resultByAppealID.Count; j++)
                         {
+                            if (returnDto.UpadateDate != null)
+                            {
+                                if (returnDto.InsertDate < resultByAppealID[j].InsertDate)
+                                {
+                                    returnDto = resultByAppealID[j];
 
-                            if (returnDto.InsertDate < resultByAppealID[j].InsertDate)
+                                }
+                            }
+                            else
                             {
                                 returnDto = resultByAppealID[j];
                             }
+
                         }
                         AppealInfoDTO returnAppealDto = appealInfoDTO.Where(x => x.A_ID == returnDto.A_ID).FirstOrDefault();
+                        returnAppealDto.GrandAreaSize = returnDto.GrandAreaSize == "" ? "0" : returnDto.GrandAreaSize;
                         groupByAppealID.Add(returnAppealDto);
                     }
                 }
@@ -224,31 +265,78 @@ namespace TKDSIM.WebAPI.Controllers
             List<AppealInfoDetailDto> groupByAppealID = IncomingAppeal(appealInfoDTO, appealInfoDetailDTO);
 
 
+
             ReportAllDto reportAllDto = new ReportAllDto();
             reportAllDto.EntAppealStateCount = groupByAppealID.Where(x => x.PropertType == 13).Count().ToString();
             reportAllDto.EntAppealMunicipalityCount = groupByAppealID.Where(x => x.PropertType == 14).Count().ToString();
             reportAllDto.EntAppealPhysicalAndLegalCount = groupByAppealID.Where(x => x.PropertType == 15).Count().ToString();
 
 
-            reportAllDto.AppealReasonStateNeedCount1 = IncomingAppeal(appealInfoDTO.Where(x => x.AppealReason == 141).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 13).ToList()).Count().ToString();
-            reportAllDto.AppealReasonStateNeedCount2 = IncomingAppeal(appealInfoDTO.Where(x => x.AppealReason == 141).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 14).ToList()).Count().ToString();
-            reportAllDto.AppealReasonStateNeedCount3 = IncomingAppeal(appealInfoDTO.Where(x => x.AppealReason == 141).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 15).ToList()).Count().ToString();
 
-            reportAllDto.AppealReasonOtherCount1 = IncomingAppeal(appealInfoDTO.Where(x => x.AppealReason == 108).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 13).ToList()).Count().ToString();
-            reportAllDto.AppealReasonOtherCount2 = IncomingAppeal(appealInfoDTO.Where(x => x.AppealReason == 108).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 14).ToList()).Count().ToString();
-            reportAllDto.AppealReasonOtherCount3 = IncomingAppeal(appealInfoDTO.Where(x => x.AppealReason == 108).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 15).ToList()).Count().ToString();
 
-            reportAllDto.AppealReasonOwnershipCount1 = IncomingAppeal(appealInfoDTO.Where(x => x.AppealReason == 107).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 13).ToList()).Count().ToString();
-            reportAllDto.AppealReasonOwnershipCount2 = IncomingAppeal(appealInfoDTO.Where(x => x.AppealReason == 107).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 14).ToList()).Count().ToString();
-            reportAllDto.AppealReasonOwnershipCount3 = IncomingAppeal(appealInfoDTO.Where(x => x.AppealReason == 107).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 15).ToList()).Count().ToString();
+            reportAllDto.AppealReasonStateNeedCount1 = IncomingAppeal(groupByAppealID.Where(x => x.AppealReason == 141).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 13).ToList()).Count().ToString();
+            reportAllDto.AppealReasonStateNeedCount2 = IncomingAppeal(groupByAppealID.Where(x => x.AppealReason == 141).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 14).ToList()).Count().ToString();
+            reportAllDto.AppealReasonStateNeedCount3 = IncomingAppeal(groupByAppealID.Where(x => x.AppealReason == 141).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 15).ToList()).Count().ToString();
 
-            AppealInfoDTO landArea1 = IncomingAppealSize(appealInfoDTO, appealInfoDetailDTO.Where(x => x.PropertType == 13).ToList()).GroupBy(x => x.PropertType == 13).Select(cl => new AppealInfoDTO { GrandAreaSize = cl.Sum(c => Convert.ToDecimal(c.GrandAreaSize)).ToString() }).FirstOrDefault()
-                , landArea2 = IncomingAppealSize(appealInfoDTO, appealInfoDetailDTO.Where(x => x.PropertType == 14).ToList()).GroupBy(x => x.PropertType == 14).Select(cl => new AppealInfoDTO { GrandAreaSize = cl.Sum(c => Convert.ToDecimal(c.GrandAreaSize)).ToString() }).FirstOrDefault()
-                , landArea3 = IncomingAppealSize(appealInfoDTO, appealInfoDetailDTO.Where(x => x.PropertType == 15).ToList()).GroupBy(x => x.PropertType == 15).Select(cl => new AppealInfoDTO { GrandAreaSize = cl.Sum(c => Convert.ToDecimal(c.GrandAreaSize)).ToString() }).FirstOrDefault();
+            reportAllDto.AppealReasonOtherCount1 = IncomingAppeal(groupByAppealID.Where(x => x.AppealReason == 108).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 13).ToList()).Count().ToString();
+            reportAllDto.AppealReasonOtherCount2 = IncomingAppeal(groupByAppealID.Where(x => x.AppealReason == 108).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 14).ToList()).Count().ToString();
+            reportAllDto.AppealReasonOtherCount3 = IncomingAppeal(groupByAppealID.Where(x => x.AppealReason == 108).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 15).ToList()).Count().ToString();
 
-            reportAllDto.LandArea1 = landArea1 == null ? "0" : landArea1.GrandAreaSize;
-            reportAllDto.LandArea2 = landArea2 == null ? "0" : landArea2.GrandAreaSize;
-            reportAllDto.LandArea3 = landArea3 == null ? "0" : landArea3.GrandAreaSize;
+            reportAllDto.AppealReasonOwnershipCount1 = IncomingAppeal(groupByAppealID.Where(x => x.AppealReason == 107).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 13).ToList()).Count().ToString();
+            reportAllDto.AppealReasonOwnershipCount2 = IncomingAppeal(groupByAppealID.Where(x => x.AppealReason == 107).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 14).ToList()).Count().ToString();
+            reportAllDto.AppealReasonOwnershipCount3 = IncomingAppeal(groupByAppealID.Where(x => x.AppealReason == 107).ToList(), appealInfoDetailDTO.Where(x => x.PropertType == 15).ToList()).Count().ToString();
+
+            //AppealInfoDTO landArea1 = IncomingAppealSize(appealInfoDTO, appealInfoDetailDTO.Where(x => x.PropertType == 13).ToList()).GroupBy(x => x.PropertType == 13).Select(cl => new AppealInfoDTO { GrandAreaSize = cl.Sum(c => Convert.ToDecimal(c.GrandAreaSize)).ToString() }).FirstOrDefault()
+            //    , landArea2 = IncomingAppealSize(appealInfoDTO, appealInfoDetailDTO.Where(x => x.PropertType == 14).ToList()).GroupBy(x => x.PropertType == 14).Select(cl => new AppealInfoDTO { GrandAreaSize = cl.Sum(c => Convert.ToDecimal(c.GrandAreaSize)).ToString() }).FirstOrDefault()
+            //    , landArea3 = IncomingAppealSize(appealInfoDTO, appealInfoDetailDTO.Where(x => x.PropertType == 15).ToList()).GroupBy(x => x.PropertType == 15).Select(cl => new AppealInfoDTO { GrandAreaSize = cl.Sum(c => Convert.ToDecimal(c.GrandAreaSize)).ToString() }).FirstOrDefault();
+
+            decimal landArea1 = 0
+            , landArea2 = 0
+            , landArea3 = 0;
+
+
+
+            for (int i = 0; i < groupByAppealID.Count; i++)
+            {
+
+                if (groupByAppealID[i].GrandAreaSize == "")
+                {
+                    groupByAppealID[i].GrandAreaSize = "0";
+                }
+
+                if (groupByAppealID[i].GrandAreaSize != null)
+                {
+                    if (groupByAppealID[i].GrandAreaSize.IndexOf(",") > 0)
+                    {
+                        groupByAppealID[i].GrandAreaSize = groupByAppealID[i].GrandAreaSize.Replace(",", ".");
+                    }
+                }
+
+               
+
+
+
+                if (groupByAppealID[i].PropertType == 13)
+                {
+                    landArea1 += Convert.ToDecimal(groupByAppealID[i].GrandAreaSize);
+                }
+                else if (groupByAppealID[i].PropertType == 14)
+                {
+                    landArea2 += Convert.ToDecimal(groupByAppealID[i].GrandAreaSize);
+                }
+                else if (groupByAppealID[i].PropertType == 15)
+                {
+                    landArea3 += Convert.ToDecimal(groupByAppealID[i].GrandAreaSize);
+                }
+
+            }
+
+
+
+
+            reportAllDto.LandArea1 = landArea1.ToString();
+            reportAllDto.LandArea2 = landArea2.ToString();
+            reportAllDto.LandArea3 = landArea3.ToString();
 
 
             List<AppealInfoDTO> appealInfoLandUsePlan1 = IncomingAppealSize(appealInfoDTO, appealInfoDetailDTO.Where(x => x.PropertType == 13).ToList()),
@@ -263,6 +351,10 @@ namespace TKDSIM.WebAPI.Controllers
             reportAllDto.LandUsePlanNotReadyByMunicipalityCount = getWorkDonefrom(appealInfoLandUsePlan1, workDoneFormDTO.Where(x => x.PlaceStructureOrderStatus == 143).ToList()).Count().ToString();
             reportAllDto.LandUsePlanNotReadyByPhysicalAndLegalCount = getWorkDonefrom(appealInfoLandUsePlan1, workDoneFormDTO.Where(x => x.PlaceStructureOrderStatus == 143).ToList()).Count().ToString();
 
+            reportAllDto.LandUsePlanNoOrderByStateCount = getWorkDonefrom(appealInfoLandUsePlan1, workDoneFormDTO.Where(x => x.PlaceStructureOrderStatus == 181).ToList()).Count().ToString();
+            reportAllDto.LandUsePlanNoOrderByMunicipalityCount = getWorkDonefrom(appealInfoLandUsePlan2, workDoneFormDTO.Where(x => x.PlaceStructureOrderStatus == 181).ToList()).Count().ToString();
+            reportAllDto.LandUsePlanNoOrderByPhysicalAndLegalCount = getWorkDonefrom(appealInfoLandUsePlan3, workDoneFormDTO.Where(x => x.PlaceStructureOrderStatus == 181).ToList()).Count().ToString();
+
             reportAllDto.NKStatusApprovedByStateCount = getOrderProject(appealInfoLandUsePlan1, orderProjectDTO.Where(x => x.OrderStatus == 139).ToList()).Count().ToString();
             reportAllDto.NKStatusApprovedByMunicipalityCount = getOrderProject(appealInfoLandUsePlan2, orderProjectDTO.Where(x => x.OrderStatus == 139).ToList()).Count().ToString();
             reportAllDto.NKStatusApprovedByPhysicalAndLegalCount = getOrderProject(appealInfoLandUsePlan3, orderProjectDTO.Where(x => x.OrderStatus == 139).ToList()).Count().ToString();
@@ -276,8 +368,8 @@ namespace TKDSIM.WebAPI.Controllers
             reportAllDto.NKStatusRefusedByPhysicalAndLegalCount = getOrderProject(appealInfoLandUsePlan3, orderProjectDTO.Where(x => x.OrderStatus == 138).ToList()).Count().ToString();
 
             reportAllDto.ExaminedByStateCount = (int.Parse(reportAllDto.EntAppealStateCount) - (int.Parse(reportAllDto.NKStatusApprovedByStateCount) + int.Parse(reportAllDto.NKStatusConsideredByStateCount) + int.Parse(reportAllDto.NKStatusRefusedByStateCount))).ToString();
-            reportAllDto.ExaminedByMunicipalityCount = (int.Parse(reportAllDto.EntAppealMunicipalityCount) - (int.Parse(reportAllDto.NKStatusConsideredByMunicipalityCount) + int.Parse(reportAllDto.NKStatusConsideredByMunicipalityCount) + int.Parse(reportAllDto.NKStatusConsideredByMunicipalityCount))).ToString();
-            reportAllDto.ExaminedByPhysicalAndLegalCount = (int.Parse(reportAllDto.EntAppealPhysicalAndLegalCount) - (int.Parse(reportAllDto.NKStatusApprovedByPhysicalAndLegalCount) + int.Parse(reportAllDto.NKStatusApprovedByPhysicalAndLegalCount) + int.Parse(reportAllDto.NKStatusApprovedByPhysicalAndLegalCount))).ToString();
+            reportAllDto.ExaminedByMunicipalityCount = (int.Parse(reportAllDto.EntAppealMunicipalityCount) - (int.Parse(reportAllDto.NKStatusApprovedByMunicipalityCount) + int.Parse(reportAllDto.NKStatusConsideredByMunicipalityCount) + int.Parse(reportAllDto.NKStatusRefusedByMunicipalityCount))).ToString();
+            reportAllDto.ExaminedByPhysicalAndLegalCount = (int.Parse(reportAllDto.EntAppealPhysicalAndLegalCount) - (int.Parse(reportAllDto.NKStatusApprovedByPhysicalAndLegalCount) + int.Parse(reportAllDto.NKStatusConsideredByPhysicalAndLegalCount) + int.Parse(reportAllDto.NKStatusRefusedByPhysicalAndLegalCount))).ToString();
 
 
             return Ok(reportAllDto);
@@ -289,21 +381,21 @@ namespace TKDSIM.WebAPI.Controllers
 
             List<AppealInfoDetailDto> groupByAppealID = new List<AppealInfoDetailDto>();
 
-            
-                AppealInfoDetailDto returnDto = new AppealInfoDetailDto();
-                if (appealInfoDetailDTO.Count > 0)
-                {
-                    returnDto = appealInfoDetailDTO[0];
-                    for (int j = 0; j < appealInfoDetailDTO.Count; j++)
-                    {
 
-                        if (returnDto.InsertDate < appealInfoDetailDTO[j].InsertDate)
-                        {
-                            returnDto = appealInfoDetailDTO[j];
-                        }
+            AppealInfoDetailDto returnDto = new AppealInfoDetailDto();
+            if (appealInfoDetailDTO.Count > 0)
+            {
+                returnDto = appealInfoDetailDTO[0];
+                for (int j = 0; j < appealInfoDetailDTO.Count; j++)
+                {
+
+                    if (returnDto.InsertDate < appealInfoDetailDTO[j].InsertDate)
+                    {
+                        returnDto = appealInfoDetailDTO[j];
                     }
-                    groupByAppealID.Add(returnDto);
                 }
+                groupByAppealID.Add(returnDto);
+            }
 
 
             return groupByAppealID;
@@ -342,17 +434,17 @@ namespace TKDSIM.WebAPI.Controllers
             List<AppealInfoDetailDto> appealInfoDetailDTO = await _appealInfoDetail.GetListByAppealID(id);
             List<OrderProjectDTO> orderProjectDTO = await _orderProjectBLL.GetByAppealInfoID((decimal)id);
             List<WorkDoneFormDTO> workDoneFormDTO = await _workDoneForm.GetByAppealInfoID(id);
-         
+
 
             AppealInfoDetailDto appealInfoDetailDto = IncomingAppeal(appealInfoDTO, appealInfoDetailDTO).FirstOrDefault();
 
             ReportDto reportDto = new ReportDto();
 
-            string[] regionSplit = appealInfoDTO.Region.Split(';');
-            string region="";
+            string[] regionSplit = appealInfoDetailDto.Region.Split(';');
+            string region = "";
             for (int i = 0; i < regionSplit.Length; i++)
             {
-                if (regionSplit[i] != "") 
+                if (regionSplit[i] != "")
                 {
                     region += _adminUnitBLL.AdminUnitByID(regionSplit[i]).Result.Name + " ";
                 }
@@ -361,8 +453,9 @@ namespace TKDSIM.WebAPI.Controllers
 
 
             reportDto.Region = region;
-            reportDto.Address = appealInfoDTO.Address;
-            reportDto.ApplicantName = appealInfoDTO.ApplicantName;
+            reportDto.Address = appealInfoDetailDto.Address;
+            reportDto.ApplicantName = appealInfoDetailDto.ApplicantName;
+            reportDto.MainApplicantName = appealInfoDetailDto.MainApplicantName;
             reportDto.PropertType = appealInfoDetailDto.PropertType;
 
 
@@ -374,9 +467,9 @@ namespace TKDSIM.WebAPI.Controllers
                 reportDto.PropertyTypeName = properType.Value;
             }
 
-            reportDto.GrandAreaSize = appealInfoDTO.GrandAreaSize;
+            reportDto.GrandAreaSize = appealInfoDetailDto.GrandAreaSize;
 
-            
+
 
             reportDto.GrandCategoryTypeName = appealInfoDetailDto.GrandCategoryTypeName;
 
@@ -388,49 +481,54 @@ namespace TKDSIM.WebAPI.Controllers
             }
 
 
-            EnumValueDTO willchangeCate = await _enumValueBLL.GetByID(appealInfoDTO.WillChangeCategory);
+            EnumValueDTO willchangeCate = await _enumValueBLL.GetByID(appealInfoDetailDto.WillChangeCategory);
 
             if (willchangeCate != null)
             {
                 reportDto.WillChangeCategoryName = willchangeCate.Value;
 
-                if (appealInfoDTO.UqodyaWCC!=0 && appealInfoDTO.UqodyaWCC != null)
+                if (appealInfoDetailDto.UqodyaWCC != 0 && appealInfoDetailDto.UqodyaWCC != null)
                 {
-                    EnumValueDTO willchangeCateEnum = await _enumValueBLL.GetByID(appealInfoDTO.UqodyaWCC);
+                    EnumValueDTO willchangeCateEnum = await _enumValueBLL.GetByID(appealInfoDetailDto.UqodyaWCC);
 
-                    reportDto.WillChangeCategoryName += " (" + willchangeCateEnum.Value + ")"; 
+                    reportDto.WillChangeCategoryName += " (" + willchangeCateEnum.Value + ")";
                 }
             }
 
 
 
             reportDto.PlaceStructureOrderStatusName = "";
-            if (IncomingAppealWorkDoneFrom(workDoneFormDTO).Count>0)
+            reportDto.PlaceStructureOrderNote = "";
+            if (IncomingAppealWorkDoneFrom(workDoneFormDTO).Count > 0)
             {
                 reportDto.PlaceStructureOrderStatusName = IncomingAppealWorkDoneFrom(workDoneFormDTO).FirstOrDefault().PlaceStructureOrderStatusName;
-
+                reportDto.PlaceStructureOrderNote = IncomingAppealWorkDoneFrom(workDoneFormDTO).FirstOrDefault().PlaceStructureOrderNote;
             }
 
             List<MissingDocsDTO> miss = await _missingDocsBLL.GetByAppealInfoID(id);
 
             string missingdoc = "";
 
-            for (int i = 0; i < miss.Count ; i++)
+            for (int i = 0; i < miss.Count; i++)
             {
-                missingdoc += miss[i].DocNameValue+ ", ";
+                missingdoc += miss[i].DocNameValue + ", ";
             }
 
             reportDto.MissingDocs = missingdoc;
 
-            EnumValueDTO enumValueDTO =new EnumValueDTO();
+            EnumValueDTO enumValueDTO = new EnumValueDTO();
 
-            if (orderProjectDTO.Count>0)
+            if (orderProjectDTO.Count > 0)
             {
                 enumValueDTO = await _enumValueBLL.GetByID(orderProjectDTO.FirstOrDefault().OrderStatus);
             }
 
-          
-            reportDto.OrderStatusName = enumValueDTO.Value;
+            if (reportDto.OrderStatusName != null)
+            {
+
+                reportDto.OrderStatusName = enumValueDTO.Value;
+                reportDto.OrderStatusNote = orderProjectDTO.OrderBy(x => x.InsertDate).FirstOrDefault().OrderStatusNote;
+            }
 
             return Ok(reportDto);
         }

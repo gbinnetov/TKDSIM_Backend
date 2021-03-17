@@ -10,6 +10,7 @@ namespace TKDSIM.BLL.Interface
     {
         Task<AppealInfoDTO> Add(AppealInfoDTO item);
         Task<AppealInfoDTO> Update(AppealInfoDTO item);
+        Task<AppealInfoDTO> UpdateDate(int id);
         void Delete(int id);
         Task<AppealInfoDTO> GetByID(decimal id);
         Task<List<AppealInfoDTO>> AppealInfoSearch(AppealInfoDTO item);

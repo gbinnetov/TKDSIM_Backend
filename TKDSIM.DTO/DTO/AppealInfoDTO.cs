@@ -25,6 +25,7 @@ namespace TKDSIM.DTO.DTO
         public string DeqkisNo { get; set; }
         public string AppealNo { get; set; }
         public int OrderStatus { get; set; }
+        public int PlaceStructureOrderStatus { get; set; }
         public string GrandAreaSize { get; set; }
         public int GrandCategory { get; set; }
         public int GrandCategoryType { get; set; }
@@ -40,5 +41,17 @@ namespace TKDSIM.DTO.DTO
         public DateTime? EndDate { get; set; }
         public DateTime? UpadateDate { get; set; }
         public DateTime? DeleteDate { get; set; }
+        public string MainApplicantName { get; set; }
+        public string AppealContent { get; set; }
+
+        public string PlaceStructureOrderNo { get; set; }
+        public string PlaceStructureOrderStatusName { get; set; }
+        public int MissingDocName { get; set; }
+        public string MissingDocNameName { get; set; }
+
+        public int OrderNo { get; set; }
+        public string OrderNoName { get; set; }
+
+        public string LatterNo { get; set; }
     }
 }

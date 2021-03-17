@@ -54,7 +54,7 @@ namespace TKDSIM.WebAPI.Controllers
         {
 
             List<AdminUnitDto> adminUnitDtos = await _adminUnitBLL.AdminUnitByParentCode(parentCode);
-
+            adminUnitDtos = adminUnitDtos.OrderBy(x => x.Name).ToList();
             return Ok(adminUnitDtos);
         }
 

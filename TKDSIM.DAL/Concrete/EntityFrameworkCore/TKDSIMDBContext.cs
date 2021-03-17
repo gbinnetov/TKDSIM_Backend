@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+
 using System.Text;
 using TKDSIM.DAL.Concrete.EntityFrameworkCore.Mapping;
 using TKDSIM.Entity.Entity;
@@ -13,7 +14,8 @@ namespace TKDSIM.DAL.Concrete.EntityFrameworkCore
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=10.0.6.25;Database=TKDSIM;MultipleActiveResultSets=true;User Id=sa; Password=byte");
-          // optionsBuilder.UseSqlServer(@"Server=DESKTOP-6QLETL0;Database=TKDSIM;Trusted_Connection=True;MultipleActiveResultSets=true;");
+            // optionsBuilder.UseSqlServer(@"Server=DESKTOP-6QLETL0;Database=TKDSIM;Trusted_Connection=True;MultipleActiveResultSets=true;");
+           // optionsBuilder.UseSqlServer(@"Server=RXITM169;Database=TKDSIM;Trusted_Connection=True;MultipleActiveResultSets=true;");
 
         }
 

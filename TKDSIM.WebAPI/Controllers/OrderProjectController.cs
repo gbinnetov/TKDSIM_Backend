@@ -18,9 +18,11 @@ namespace TKDSIM.WebAPI.Controllers
     public class OrderProjectController : ControllerBase
     {
         private readonly IOrderProjectBLL _OrderProjectBLL;
-        public OrderProjectController(IOrderProjectBLL OrderProjectBLL)
+        private readonly IAppealInfoBLL _appealInfoBLL;
+        public OrderProjectController(IOrderProjectBLL OrderProjectBLL, IAppealInfoBLL appealInfoBLL)
         {
             _OrderProjectBLL = OrderProjectBLL;
+            _appealInfoBLL = appealInfoBLL;
         }
 
         [HttpGet("OrderProjectGetAll")]
@@ -54,10 +56,12 @@ namespace TKDSIM.WebAPI.Controllers
         public async Task<IActionResult> OrderProjectUpdate(OrderProjectDTO item)
         {
 
-            OrderProjectDTO OrderProjectDTO = await _OrderProjectBLL.Update(item);
+            List<OrderProjectDTO> OrderProjectDTO = await _OrderProjectBLL.Update(item);
 
             if (OrderProjectDTO == null)
                 return Ok(HttpStatusCode.NotFound);
+
+            _appealInfoBLL.UpdateDate(item.A_ID);
 
             return Ok(OrderProjectDTO);
         }
@@ -66,10 +70,12 @@ namespace TKDSIM.WebAPI.Controllers
         public async Task<IActionResult> OrderProjectInsert(OrderProjectDTO item)
         {
 
-            OrderProjectDTO OrderProjectDTO = await _OrderProjectBLL.Add(item);
+            List<OrderProjectDTO> OrderProjectDTO = await _OrderProjectBLL.Add(item);
 
             if (OrderProjectDTO == null)
                 return Ok(HttpStatusCode.NotFound);
+
+            _appealInfoBLL.UpdateDate(item.A_ID);
 
             return Ok(OrderProjectDTO);
         }
@@ -79,6 +85,8 @@ namespace TKDSIM.WebAPI.Controllers
         {
 
             _OrderProjectBLL.Delete(id);
+
+            _appealInfoBLL.UpdateDate(id);
 
             return Ok(HttpStatusCode.OK);
         }

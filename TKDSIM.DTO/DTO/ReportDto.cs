@@ -27,5 +27,7 @@ namespace TKDSIM.DTO.DTO
         public int OrderStatus { get; set; }
         public string OrderStatusName { get; set; }
         public string OrderStatusNote { get; set; }
+        public string MainApplicantName { get; set; }
+        public string PlaceStructureOrderNote { get; set; }
     }
 }

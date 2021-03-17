@@ -142,3 +142,6 @@ D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.DAL\obj\Debug\netcoreapp3
 D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.DAL\obj\Debug\netcoreapp3.1\TKDSIM.DAL.csproj.CopyComplete
 D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.DAL\obj\Debug\netcoreapp3.1\TKDSIM.DAL.dll
 D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.DAL\obj\Debug\netcoreapp3.1\TKDSIM.DAL.pdb
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.DAL\bin\Debug\netcoreapp3.1\TKDSIM.DAL.runtimeconfig.json
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.DAL\bin\Debug\netcoreapp3.1\TKDSIM.DAL.runtimeconfig.dev.json
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.DAL\obj\Debug\netcoreapp3.1\TKDSIM.DAL.genruntimeconfig.cache

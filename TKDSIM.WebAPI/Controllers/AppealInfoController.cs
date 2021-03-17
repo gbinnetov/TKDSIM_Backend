@@ -52,18 +52,7 @@ namespace TKDSIM.WebAPI.Controllers
         [HttpPost("appealInfoUpdate")]
         public async Task<IActionResult> AppealInfoUpdate(AppealInfoDTO item)
         {
-            if (item.RegionList.Count == 1)
-            {
-                item.Region = item.RegionList[0] + ";;";
-            }
-            else if (item.RegionList.Count == 2)
-            {
-                item.Region = item.RegionList[0] + ";" + item.RegionList[1] + ";";
-            }
-            else if (item.RegionList.Count == 3)
-            {
-                item.Region = item.RegionList[0] + ";" + item.RegionList[1] + ";" + item.RegionList[2];
-            }
+          
 
             AppealInfoDTO appealInfoDTO = await _appealInfoBLL.Update(item);
 
@@ -92,18 +81,6 @@ namespace TKDSIM.WebAPI.Controllers
         public async Task<IActionResult> appealInfoInsert(AppealInfoDTO item)
         {
 
-            if (item.RegionList.Count==1)
-            {
-                item.Region = item.RegionList[0] + ";;";
-            }
-            else if (item.RegionList.Count == 2)
-            {
-                item.Region = item.RegionList[0] + ";"+item.RegionList[1]+";";
-            }
-            else if (item.RegionList.Count == 3)
-            {
-                item.Region = item.RegionList[0] + ";" + item.RegionList[1] + ";"+item.RegionList[2];
-            }
             AppealInfoDTO appealInfoDTO = await _appealInfoBLL.Add(item);
 
             if (appealInfoDTO == null)

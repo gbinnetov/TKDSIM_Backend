@@ -20,5 +20,25 @@ namespace TKDSIM.DTO.DTO
         public DateTime? InsertDate { get; set; }
         public DateTime? UpadateDate { get; set; }
         public DateTime? DeleteDate { get; set; }
+        public DateTime? DeqkisDate { get; set; }
+        public List<string> RegionList { get; set; }
+        public string Region { get; set; }
+        public int IED_EV { get; set; }
+        public string Address { get; set; }
+        public int ApplicantType { get; set; }
+        public string ApplicantTypeName { get; set; }
+        public string ApplicantName { get; set; }
+        public string GrandAreaSize { get; set; }
+        public int UqodyaWCC { get; set; }
+        public string UqodyaWCCName { get; set; }
+        public int WillChangeCategory { get; set; }
+        public string WillChangeCategoryName { get; set; }
+        //public int Planting { get; set; }
+        public int AppealReason { get; set; }
+        public string AppealReasonName { get; set; }
+
+        public string MainApplicantName { get; set; }
+        public string AppealContent { get; set; }
+
     }
 }

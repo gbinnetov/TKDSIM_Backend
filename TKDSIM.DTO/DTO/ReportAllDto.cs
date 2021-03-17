@@ -27,6 +27,9 @@ namespace TKDSIM.DTO.DTO
         public string LandUsePlanNotReadyByStateCount { get; set; }
         public string LandUsePlanNotReadyByMunicipalityCount { get; set; }
         public string LandUsePlanNotReadyByPhysicalAndLegalCount { get; set; }
+        public string LandUsePlanNoOrderByStateCount { get; set; }
+        public string LandUsePlanNoOrderByMunicipalityCount { get; set; }
+        public string LandUsePlanNoOrderByPhysicalAndLegalCount { get; set; }
         public string NKStatusApprovedByStateCount { get; set; }
         public string NKStatusApprovedByMunicipalityCount { get; set; }
         public string NKStatusApprovedByPhysicalAndLegalCount { get; set; }

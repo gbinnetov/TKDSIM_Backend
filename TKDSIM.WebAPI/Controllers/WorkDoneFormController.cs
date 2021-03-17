@@ -18,9 +18,11 @@ namespace TKDSIM.WebAPI.Controllers
     public class WorkDoneFormController : ControllerBase
     {
         private readonly IWorkDoneFormBLL _WorkDoneFormBLL;
-        public WorkDoneFormController(IWorkDoneFormBLL WorkDoneFormBLL)
+        private readonly IAppealInfoBLL _appealInfoBLL;
+        public WorkDoneFormController(IWorkDoneFormBLL WorkDoneFormBLL, IAppealInfoBLL appealInfoBLL)
         {
             _WorkDoneFormBLL = WorkDoneFormBLL;
+            _appealInfoBLL = appealInfoBLL;
         }
 
         [HttpGet("WorkDoneFormGetAll")]
@@ -59,6 +61,8 @@ namespace TKDSIM.WebAPI.Controllers
             if (WorkDoneFormDTO == null)
                 return Ok(HttpStatusCode.NotFound);
 
+            _appealInfoBLL.UpdateDate(item.A_ID);
+
             return Ok(WorkDoneFormDTO);
         }
 
@@ -71,6 +75,8 @@ namespace TKDSIM.WebAPI.Controllers
             if (WorkDoneFormDTO == null)
                 return Ok(HttpStatusCode.NotFound);
 
+            _appealInfoBLL.UpdateDate(item.A_ID);
+
             return Ok(WorkDoneFormDTO);
         }
 
@@ -79,6 +85,8 @@ namespace TKDSIM.WebAPI.Controllers
         {
 
             _WorkDoneFormBLL.Delete(id);
+
+            _appealInfoBLL.UpdateDate(id);
 
             return Ok(HttpStatusCode.OK);
         }

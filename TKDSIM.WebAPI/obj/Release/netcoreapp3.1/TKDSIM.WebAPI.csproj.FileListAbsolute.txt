@@ -88,3 +88,9 @@ D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\obj\Release\netcor
 D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\obj\Release\netcoreapp3.1\TKDSIM.WebAPI.dll
 D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\obj\Release\netcoreapp3.1\TKDSIM.WebAPI.pdb
 D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\obj\Release\netcoreapp3.1\TKDSIM.WebAPI.genruntimeconfig.cache
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\bin\Release\netcoreapp3.1\EntityFramework.SqlServer.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\bin\Release\netcoreapp3.1\EntityFramework.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\bin\Release\netcoreapp3.1\System.CodeDom.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\bin\Release\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Projects\TKDSIM_API-master\TKDSIM_API-master\TKDSIM.WebAPI\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

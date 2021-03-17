@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tz0zmBjZgQlCSUykgUspY2ozEl/hKE8qCEFyVp3I0y73uiXIWShbAi1Hw0lxODesTl0q+0SWQeNH8MwB74LsZQ==",
+  "dgSpecHash": "GM0TJxDyqF7lMsLZjPY2P7IFc8pdaNCHoPZXPyR9YmOXLdFxaLDo5Yoj92j0OVJitU1QzUXgqDWLVXSOF+86RQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.DTO\\TKDSIM.DTO.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\GunduzB\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.8\\microsoft.aspnetcore.http.features.3.1.8.nupkg.sha512",
-    "C:\\Users\\GunduzB\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.8\\microsoft.extensions.primitives.3.1.8.nupkg.sha512",
-    "C:\\Users\\GunduzB\\.nuget\\packages\\system.io.pipelines\\4.7.2\\system.io.pipelines.4.7.2.nupkg.sha512"
+    "C:\\Users\\GunduzB\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.1\\microsoft.aspnetcore.http.features.5.0.1.nupkg.sha512",
+    "C:\\Users\\GunduzB\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\GunduzB\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
   ],
   "logs": []
 }

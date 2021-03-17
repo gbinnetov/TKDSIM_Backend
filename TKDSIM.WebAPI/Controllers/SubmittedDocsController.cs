@@ -19,9 +19,11 @@ namespace TKDSIM.WebAPI.Controllers
     public class SubmittedDocsController : ControllerBase
     {
         private readonly ISubmittedDocsBLL _SubmittedDocsBLL;
-        public SubmittedDocsController(ISubmittedDocsBLL SubmittedDocsBLL)
+        private readonly IAppealInfoBLL _appealInfoBLL;
+        public SubmittedDocsController(ISubmittedDocsBLL SubmittedDocsBLL, IAppealInfoBLL appealInfoBLL)
         {
             _SubmittedDocsBLL = SubmittedDocsBLL;
+            _appealInfoBLL = appealInfoBLL;
         }
 
         [HttpGet("SubmittedDocsGetAll")]
@@ -76,6 +78,8 @@ namespace TKDSIM.WebAPI.Controllers
             if (SubmittedDocsDTO == null)
                 return Ok(HttpStatusCode.NotFound);
 
+            _appealInfoBLL.UpdateDate(item.A_ID);
+
             return Ok(SubmittedDocsDTO);
         }
 
@@ -87,6 +91,8 @@ namespace TKDSIM.WebAPI.Controllers
             if (SubmittedDocsDTO == null)
                 return Ok(HttpStatusCode.NotFound);
 
+            _appealInfoBLL.UpdateDate(item.A_ID);
+
             return Ok(SubmittedDocsDTO);
         }
 
@@ -95,6 +101,8 @@ namespace TKDSIM.WebAPI.Controllers
         {
 
             _SubmittedDocsBLL.Delete(id);
+
+            _appealInfoBLL.UpdateDate(id);
 
             return Ok(HttpStatusCode.OK);
         }

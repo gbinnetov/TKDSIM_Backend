@@ -18,10 +18,12 @@ namespace TKDSIM.WebAPI.Controllers
     public class AppealInfoDetailController : ControllerBase
     {
         private readonly IAppealInfoDetailBLL _appealInfodetail;
+        private readonly IAppealInfoBLL _appealInfoBLL;
 
-        public AppealInfoDetailController(IAppealInfoDetailBLL appealInfodetail)
+        public AppealInfoDetailController(IAppealInfoDetailBLL appealInfodetail, IAppealInfoBLL appealInfoBLL)
         {
             _appealInfodetail = appealInfodetail;
+            _appealInfoBLL = appealInfoBLL;
         }
 
         [HttpGet("appealInfoDetailGetAll")]
@@ -58,11 +60,24 @@ namespace TKDSIM.WebAPI.Controllers
         [HttpPost("appealInfoDetailAdd")]
         public async Task<IActionResult> appealInfoDetailAdd(AppealInfoDetailDto item)
         {
-
+            if (item.RegionList.Count == 1)
+            {
+                item.Region = item.RegionList[0] + ";;";
+            }
+            else if (item.RegionList.Count == 2)
+            {
+                item.Region = item.RegionList[0] + ";" + item.RegionList[1] + ";";
+            }
+            else if (item.RegionList.Count == 3)
+            {
+                item.Region = item.RegionList[0] + ";" + item.RegionList[1] + ";" + item.RegionList[2];
+            } 
             List<AppealInfoDetailDto> appealInfoDTO = await _appealInfodetail.Add(item);
 
             if (appealInfoDTO == null)
                 return Ok(HttpStatusCode.NotFound);
+
+            _appealInfoBLL.UpdateDate(item.A_ID);
 
             return Ok(appealInfoDTO);
         }
@@ -71,10 +86,25 @@ namespace TKDSIM.WebAPI.Controllers
         public async Task<IActionResult> appealInfoDetailUpdate(AppealInfoDetailDto item)
         {
 
+            if (item.RegionList.Count == 1)
+            {
+                item.Region = item.RegionList[0] + ";;";
+            }
+            else if (item.RegionList.Count == 2)
+            {
+                item.Region = item.RegionList[0] + ";" + item.RegionList[1] + ";";
+            }
+            else if (item.RegionList.Count == 3)
+            {
+                item.Region = item.RegionList[0] + ";" + item.RegionList[1] + ";" + item.RegionList[2];
+            }
+
             List<AppealInfoDetailDto> appealInfoDTO = await _appealInfodetail.Update(item);
 
             if (appealInfoDTO == null)
                 return Ok(HttpStatusCode.NotFound);
+
+            _appealInfoBLL.UpdateDate(item.A_ID);
 
             return Ok(appealInfoDTO);
         }
@@ -82,7 +112,7 @@ namespace TKDSIM.WebAPI.Controllers
         public async Task<IActionResult> appealInfoDetailDelete(int id)
         {
             List<AppealInfoDetailDto> appealInfoDTO = await _appealInfodetail.Delete(id);
-
+            _appealInfoBLL.UpdateDate(id);
 
             return Ok(appealInfoDTO);
         }

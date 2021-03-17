@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TKDSIM.BLL.Interface;
@@ -44,7 +45,7 @@ namespace TKDSIM.BLL.TKDSIMBLL
         {
             List<AdminUnit> adminUnit = await _eFAdminUnitDal.GetAll(x => x.ParentCode == parentCode);
             List<AdminUnitDto> appealInfo = _mapper.Map<List<AdminUnitDto>>(adminUnit);
-            return appealInfo;
+            return appealInfo.OrderBy(x=>x.Name).ToList();
         }
         public async Task<List<AdminUnitDto>> AdminUnitChildByCode(string code)
         {

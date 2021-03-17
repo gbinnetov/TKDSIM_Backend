@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BGiXtcirZ5SgcJ0/NIxMac2kJS/BIzYHisDNj9pmE4GkzM2dGOtRuleedBZtDifGnmTTlyVYh+hdE9gmJYO4GQ==",
+  "dgSpecHash": "08ADaNlgeqMNeupFBd/NO0ME33R3msirKMA0FfbrV/JEu4EWzhPtuNE7oBoyw1APyV/okLkAHWAim30M20Btyg==",
   "success": true,
   "projectFilePath": "D:\\Projects\\TKDSIM_API-master\\TKDSIM_API-master\\TKDSIM.Entity\\TKDSIM.Entity.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\GunduzB\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.1\\microsoft.aspnetcore.http.features.5.0.1.nupkg.sha512",
+    "C:\\Users\\GunduzB\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\GunduzB\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

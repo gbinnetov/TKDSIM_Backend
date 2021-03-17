@@ -22,11 +22,24 @@ namespace TKDSIM.BLL.TKDSIMBLL
             _mapper = mapper;
         }
 
+        async void MainApplicantNameUpdate(List<AppealInfoDetail> items, string mainApplicantName)
+        {
+            foreach (var item in items)
+            {
+                item.MainApplicantName = mainApplicantName;
+                AppealInfoDetail appealInfoDetailResult = await _appealInfoDetailDal.UpdateAsync(item);
+            }
+        }
+
         public async Task<List<AppealInfoDetailDto>> Add(AppealInfoDetailDto item)
         {
             AppealInfoDetail appealInfodetail = _mapper.Map<AppealInfoDetail>(item);
             appealInfodetail.InsertDate = DateTime.Now;
+            appealInfodetail.UqodiyaGC = item.UqodiyaGC;
             AppealInfoDetail appealInfoDetailResult = await _appealInfoDetailDal.AddAsync(appealInfodetail);
+
+             MainApplicantNameUpdate( await _appealInfoDetailDal.GetAll(x => x.A_ID == appealInfodetail.A_ID), item.MainApplicantName);
+
             List<AppealInfoDetailDto> appealInfoDetailDTO = await _appealInfoDetailDal.AppealInfoDetailsGetByAppealID(appealInfodetail.A_ID);
             return appealInfoDetailDTO;
         }
@@ -41,7 +54,7 @@ namespace TKDSIM.BLL.TKDSIMBLL
                 await _appealInfoDetailDal.DeleteAsync(appealInfodetail);
             }
 
-            return await  _appealInfoDetailDal.AppealInfoDetailsGetByAppealID(appealInfodetail.A_ID);
+            return await _appealInfoDetailDal.AppealInfoDetailsGetByAppealID(appealInfodetail.A_ID);
         }
 
         public async Task<List<AppealInfoDetailDto>> GetList()
@@ -73,11 +86,18 @@ namespace TKDSIM.BLL.TKDSIMBLL
             appealInfodetail.UpadateDate = DateTime.Now;
             appealInfodetail.InsertDate = appealInfodetailgetById.InsertDate;
             appealInfodetail.A_ID = appealInfodetailgetById.A_ID;
+            appealInfodetail.UqodiyaGC = item.UqodiyaGC;
 
 
             AppealInfoDetail appealInfoDetailResult = await _appealInfoDetailDal.UpdateAsync(appealInfodetail);
+
+            MainApplicantNameUpdate(await _appealInfoDetailDal.GetAll(x => x.A_ID == appealInfodetail.A_ID), item.MainApplicantName);
             List<AppealInfoDetailDto> appealInfoDetailDTO = await _appealInfoDetailDal.AppealInfoDetailsGetByAppealID(appealInfodetail.A_ID);
             return appealInfoDetailDTO;
         }
+
+
+
+
     }
 }

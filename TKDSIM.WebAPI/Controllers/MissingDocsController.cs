@@ -18,9 +18,11 @@ namespace TKDSIM.WebAPI.Controllers
     public class MissingDocsController : ControllerBase
     {
         private readonly IMissingDocsBLL _MissingDocsBLL;
-        public MissingDocsController(IMissingDocsBLL MissingDocsBLL)
+        private readonly IAppealInfoBLL _appealInfoBLL;
+        public MissingDocsController(IMissingDocsBLL MissingDocsBLL, IAppealInfoBLL appealInfoBLL)
         {
             _MissingDocsBLL = MissingDocsBLL;
+            _appealInfoBLL = appealInfoBLL;
         }
 
         [HttpGet("MissingDocsGetAll")]
@@ -61,6 +63,8 @@ namespace TKDSIM.WebAPI.Controllers
             if (MissingDocsDTO == null)
                 return Ok(HttpStatusCode.NotFound);
 
+            _appealInfoBLL.UpdateDate(item.A_ID);
+
             return Ok(MissingDocsDTO);
         }
 
@@ -69,6 +73,8 @@ namespace TKDSIM.WebAPI.Controllers
         {
 
             _MissingDocsBLL.Delete(id);
+
+            _appealInfoBLL.UpdateDate(id);
 
             return Ok(HttpStatusCode.OK);
         }
